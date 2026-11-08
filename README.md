@@ -4,7 +4,7 @@
 
 **React 19 · React Router 7 · Vite 8 · CSS3 mobile first**
 
-[Site publicado](https://enzotrotto-ibmec.github.io/PFE-2026-2-Grupo-1-React/) · [Versão Vanilla (AC)](https://github.com/enzotrotto-ibmec/PFE-2026-2-Grupo-1-vanila)
+[Site publicado no Vercel](https://enzotrotto-ibmec.github.io/PFE-2026-2-Grupo-1-React/) · [Versão Vanilla (AC)](https://github.com/enzotrotto-ibmec/PFE-2026-2-Grupo-1-vanila)
 
 ---
 
@@ -107,10 +107,10 @@ npm run preview  # testa essa versão final no computador
 
 Alguns comportamentos do Vanilla dependiam de acompanhar a rolagem da página, o que no React pede o hook `useEffect`, ainda não visto em aula:
 
-- [ ] Destacar no menu a seção que está na tela
-- [ ] Animar as seções quando aparecem na rolagem
-- [ ] Componente `ScrollToTop` para voltar ao topo ao trocar de página
-- [ ] Componentes vistos nas próximas aulas (acordeão, carrossel, galeria)
+- [x] Destacar no menu a seção que está na tela
+- [x] Animar as seções quando aparecem na rolagem
+- [x] Componente `ScrollToTop` para voltar ao topo ao trocar de página
+- [x] Componentes vistos nas próximas aulas (acordeão, carrossel, galeria)
 
 ## Equipe
 
@@ -126,7 +126,10 @@ Alguns comportamentos do Vanilla dependiam de acompanhar a rolagem da página, o
 
 ## Disciplina
 
-**Projeto Front-end** (turma de terça-feira) · Prof. Thiago Marcondes Santos · IBMEC · 2026.2
+**Projeto Front-end** 
+. Turma de terça-feira 
+· Prof. Thiago Marcondes Santos 
+· IBMEC · 2026.2
 
 ---
 
