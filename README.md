@@ -1,4 +1,4 @@
-# PKZ Lab & Studio One To One — React
+# PKZ Lab & Studio One To One - React
 
 **Site das duas marcas refeito em React: um portal, duas identidades e agendamento de aula experimental pelo WhatsApp.**
 
@@ -127,9 +127,9 @@ Alguns comportamentos do Vanilla dependiam de acompanhar a rolagem da página, o
 ## Disciplina
 
 **Projeto Front-end** 
-. Turma de terça-feira 
-· Prof. Thiago Marcondes Santos 
-· IBMEC · 2026.2
+- Turma de terça-feira 
+- Prof. Thiago Marcondes Santos 
+- IBMEC · 2026.2
 
 ---
 
