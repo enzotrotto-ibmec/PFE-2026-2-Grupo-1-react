@@ -98,6 +98,6 @@ Rodar `npm install` e `npm run dev`, e conferir:
 - [ ] Corrigir tudo o que o teste de 13/11 encontrou antes de publicar, e confirmar que `npm run build` termina sem erro, porque o Vercel roda esse mesmo comando (quem fez o arquivo com problema).
 - [ ] Conferir que o `vercel.json` e o `base: "/"` do `vite.config.js` estão no repositório antes da importação no Vercel (Enzo Trotto).
 - [ ] Importar o repositório no Vercel em 14/11 e passar o link para o grupo (Enzo Trotto).
-- [ ] Definir, ainda em 13/11, quem troca o número de WhatsApp de exemplo, quem revisa a política de privacidade e quem coloca o link do site no README. Hoje esses três itens estão como "A definir" na [Sprint 03](sprint-03.md) (todos).
+- [ ] Definir, ainda em 13/11, quem revisa a política de privacidade e quem coloca o link do site no README. Hoje esses dois itens estão como "A definir" na [Sprint 03](sprint-03.md) (todos).
 - [ ] Combinar o horário do ensaio da apresentação de 15/11 e quem fala em cada parte (todos).
 - [ ] Guardar a lista de problemas do teste como checklist da Sprint 03, para conferir de novo no site publicado (Enzo Trotto, como Scrum Master).
