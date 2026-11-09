@@ -32,7 +32,6 @@ Esta sprint não tem commits da ordem combinada (01 a 22, já feitos nas Sprints
 
 | ✔ | Tarefa | Quem (sugestão) |
 |---|---|---|
-| [ ] | Trocar o número de WhatsApp de exemplo (`5521000000000`) em `src/data/marcas.js`, uma vez por marca | A definir |
 | [ ] | Revisar a política de privacidade (é um modelo) com o responsável legal | A definir |
 | [ ] | Colocar o link do site publicado no README (commit extra, fora dos 22) | João Pedro Ferreira, autor do README |
 | [ ] | Corrigir o que o teste do site publicado encontrou | Quem fez o arquivo com problema |
