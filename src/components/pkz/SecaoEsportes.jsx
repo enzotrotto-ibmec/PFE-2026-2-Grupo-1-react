@@ -1,4 +1,7 @@
+import { useRef } from "react";
 import { asset, srcsetDe } from "../../utils/asset.js";
+import FaixaRolante from "../efeitos/FaixaRolante.jsx";
+import { useFaixaPorVelocidade } from "../../utils/animacoes.js";
 
 // "Sem Limites de Esporte" (exclusiva da PKZ): card da equipe técnica + grade de esportes.
 const ESPORTES = [
@@ -8,6 +11,9 @@ const ESPORTES = [
 ];
 
 export default function SecaoEsportes() {
+  const faixaRef = useRef(null);
+  useFaixaPorVelocidade(faixaRef);
+
   return (
     <section id="services" className="services-section">
       <h2>Sem Limites de Esporte</h2>
@@ -15,6 +21,16 @@ export default function SecaoEsportes() {
         Na PKZ, acreditamos que cada pessoa tem um esporte que a move. Estamos prontos para atender{" "}
         <strong>qualquer esporte que você praticar</strong>.
       </p>
+
+
+      {/* Faixa decorativa: anda sozinha e acelera com a rolagem. Os esportes já estão nos cartões, por isso aria-hidden. */}
+      <div ref={faixaRef} aria-hidden="true">
+        <FaixaRolante rotulo="Esportes atendidos na PKZ" porRolagem className="faixa-esportes">
+          {Array.from({ length: 3 }).flatMap((_, volta) =>
+            ["Karatê", "Jiu-Jitsu", "Vôlei", "Qualquer esporte"].map((nome) => <li key={`${volta}-${nome}`}>{nome}</li>),
+          )}
+        </FaixaRolante>
+      </div>
 
       <div className="team-support-card">
         <div className="team-support-img">

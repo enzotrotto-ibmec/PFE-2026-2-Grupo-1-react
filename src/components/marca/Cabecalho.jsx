@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import LinkInterno from "../LinkInterno.jsx";
 import { IconeSetaVoltar } from "../Icones.jsx";
 import { asset } from "../../utils/asset.js";
-import { outraMarca } from "../../data/marcas.js";
+import { MARCAS, outraMarca } from "../../data/marcas.js";
+import { useMenuEscalonado } from "../../utils/animacoes.js";
 
-// Cabeçalho das páginas das marcas: voltar ao portal, link para a outra marca, logo e menu.
+// Cabeçalho das páginas das marcas: voltar ao início, link para a outra marca, logo e menu.
 //
 // Props:
 //   marca              → objeto da marca (data/marcas.js)
@@ -13,22 +14,32 @@ import { outraMarca } from "../../data/marcas.js";
 //
 // Menu hambúrguer: o useState guarda se o menu está aberto. No vanilla o JS adicionava e
 // removia a classe "nav-open"; aqui a classe depende do estado e o React atualiza sozinho.
+// No celular o menu abre em tela cheia com movimento (useMenuEscalonado, utils/animacoes.js).
 export default function Cabecalho({ marca, onAbrirContato, contatoDestacado = false }) {
   const [menuAberto, setMenuAberto] = useState(false);
   const outra = outraMarca(marca.id);
+  const areaDoMenuRef = useRef(null);
+  const botaoMenuRef = useRef(null);
 
-  function fecharMenu() {
-    setMenuAberto(false);
+  // useCallback: a função precisa ser sempre a mesma, senão o movimento do menu reiniciaria a cada render
+  const fecharMenu = useCallback(() => setMenuAberto(false), []);
+  useMenuEscalonado(menuAberto, areaDoMenuRef, fecharMenu);
+
+  // Esc fecha o menu e devolve o foco ao botão que o abriu
+  function aoTeclar(e) {
+    if (e.key !== "Escape" || !menuAberto) return;
+    fecharMenu();
+    botaoMenuRef.current?.focus();
   }
 
   return (
     // Esc fecha o menu (quando o foco está no cabeçalho, ex.: no botão ou num link do menu)
-    <header className="site-header" onKeyDown={(e) => e.key === "Escape" && fecharMenu()}>
+    <header className="site-header" onKeyDown={aoTeclar}>
       <nav className="navbar" aria-label="Principal">
         <div className="nav-left">
-          <LinkInterno to="/" className="back-link" aria-label="Voltar para o Portal">
+          <LinkInterno to="/" className="back-link" aria-label="Voltar para o início">
             <IconeSetaVoltar />
-            <span className="back-text">Portal</span>
+            <span className="back-text">Início</span>
           </LinkInterno>
           <LinkInterno to={outra.rota} className="cross-brand-nav-link">
             {outra.nome} →
@@ -52,8 +63,9 @@ export default function Cabecalho({ marca, onAbrirContato, contatoDestacado = fa
           </LinkInterno>
         </div>
 
-        <div className="nav-right">
+        <div className="nav-right" ref={areaDoMenuRef}>
           <button
+            ref={botaoMenuRef}
             type="button"
             className={menuAberto ? "menu-toggle active" : "menu-toggle"}
             aria-label="Menu de navegação"
@@ -65,6 +77,12 @@ export default function Cabecalho({ marca, onAbrirContato, contatoDestacado = fa
             <span className="hamburger-bar"></span>
             <span className="hamburger-bar"></span>
           </button>
+          {menuAberto && (
+            <div className="nav-camadas" aria-hidden="true">
+              <span className="nav-camada nav-camada-1"></span>
+              <span className="nav-camada nav-camada-2"></span>
+            </div>
+          )}
           <ul id="primary-navigation" className={menuAberto ? "nav-links nav-open" : "nav-links"}>
             <li>
               <LinkInterno to={marca.rota} secao="sobre" className="nav-link" onClick={fecharMenu}>
@@ -76,6 +94,13 @@ export default function Cabecalho({ marca, onAbrirContato, contatoDestacado = fa
                 Localização
               </LinkInterno>
             </li>
+            {marca.id !== "fisio" && (
+              <li>
+                <LinkInterno to={MARCAS.fisio.rota} className="nav-link" onClick={fecharMenu}>
+                  {MARCAS.fisio.nome}
+                </LinkInterno>
+              </li>
+            )}
             <li>
               {/* Não troca de página, só abre a janela: por isso é <button>, não link */}
               <button

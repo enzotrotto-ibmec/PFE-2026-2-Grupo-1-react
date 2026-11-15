@@ -1,5 +1,6 @@
 import { IconeSetaCima, IconeWhatsapp } from "../Icones.jsx";
 import { linkWhatsapp } from "../../utils/agendamento.js";
+import { voltarAoTopo } from "../../utils/navegacao.js";
 
 // Botões flutuantes: voltar ao topo e (no desktop) WhatsApp.
 //
@@ -18,7 +19,7 @@ export default function AtalhosFlutuantes({ marca, comWhatsapp = true }) {
         className="back-to-top show"
         aria-label="Voltar ao topo"
         title="Voltar ao topo"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        onClick={voltarAoTopo}
       >
         <IconeSetaCima />
       </button>

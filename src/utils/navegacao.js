@@ -1,11 +1,19 @@
 // Ajudantes de rolagem usados pelos links internos (components/LinkInterno.jsx).
+// A rolagem suave vem da Lenis (utils/rolagem.js). Se ela não iniciou (lenis === null),
+// cada função usa a rolagem nativa do navegador.
+import { lenis } from "./rolagem.js";
 
-// Leva a tela para o topo. Usado ao trocar de página: o React Router troca o
-// componente, mas não rola a tela sozinho.
-// behavior "instant": o CSS tem scroll-behavior: smooth, e uma rolagem suave seria
-// interrompida no meio pela troca de página.
+// Leva a tela para o topo, sem animação. Usado ao trocar de página: o React Router troca o
+// componente, mas não rola a tela sozinho, e uma rolagem suave seria interrompida no meio pela troca.
 export function irParaTopo() {
-  window.scrollTo({ top: 0, behavior: "instant" });
+  if (lenis) lenis.scrollTo(0, { immediate: true, force: true });
+  else window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+// Rola suave até o topo (botão "Voltar ao topo").
+export function voltarAoTopo() {
+  if (lenis) lenis.scrollTo(0);
+  else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 // Rola até a seção com esse id (ex.: "sobre").
@@ -17,7 +25,14 @@ export function rolarParaSecao(id) {
   function tentar() {
     const secao = document.getElementById(id);
     if (secao) {
-      secao.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Seção que trava a tela e acende o texto com a rolagem (animacoes.js): vai até o FIM da trava,
+      // senão a pessoa chegaria num texto ainda apagado. Sem trava, rola até o topo da seção.
+      const fimDaTrava = Number(secao.dataset.fimPin);
+      const travada = Number.isFinite(fimDaTrava) && fimDaTrava > 0;
+      // a Lenis já desconta o scroll-padding-top da página e o scroll-margin-top da seção, como a rolagem nativa
+      if (lenis) lenis.scrollTo(travada ? fimDaTrava : secao);
+      else if (travada) window.scrollTo({ top: fimDaTrava, behavior: "smooth" });
+      else secao.scrollIntoView({ behavior: "smooth", block: "start" });
     } else if (tentativas < 60) {
       tentativas++;
       requestAnimationFrame(tentar);

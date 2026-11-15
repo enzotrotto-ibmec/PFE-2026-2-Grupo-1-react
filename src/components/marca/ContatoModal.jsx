@@ -29,7 +29,7 @@ export default function ContatoModal({ marca, aberto, onFechar }) {
       onClose={onFechar} // Esc
       onClick={(e) => e.target === e.currentTarget && onFechar()} // clique no fundo escuro
     >
-      <div className="modal-box">
+      <div className="modal-box" data-lenis-prevent>
         <button type="button" className="modal-close" aria-label="Fechar janela" onClick={onFechar}>
           &times;
         </button>
