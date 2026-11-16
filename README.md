@@ -21,6 +21,7 @@ Fisioterapia, animações presas à rolagem e transição entre páginas.
 O site é publicado via Vercel.
 
 * Link do site publicado: https://pfe-2026-2-grupo-1-react-sigma.vercel.app/
+* Link do site publicado sem agendamento: https://pfe-2026-2-grupo-1-react-semagendamento.vercel.app/
 
 ## Tecnologias
 
