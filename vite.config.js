@@ -72,6 +72,7 @@ function paginasParaGithubPages() {
 }
 
 export default defineConfig({
-  base: `/${NOME_DO_REPO}/`,
+  // Na Vercel o site fica na raiz do domínio; no GitHub Pages, em /NOME-DO-REPO/.
+  base: process.env.VERCEL ? "/" : `/${NOME_DO_REPO}/`,
   plugins: [react(), paginasParaGithubPages()],
 });
