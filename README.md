@@ -144,6 +144,11 @@ Precisa do [Node.js](https://nodejs.org/) 20.19 ou mais novo.
 ```bash
 npm install      # instala as dependências (só na primeira vez)
 npm run dev      # abre o servidor de desenvolvimento (o terminal mostra o endereço)
+```
+
+### Comandos extras
+
+```bash
 npm run build    # gera a versão de produção na pasta dist/
 npm run preview  # testa a versão de produção localmente
 npm test         # roda os testes (Node, sem dependências extras)
@@ -203,15 +208,6 @@ sem `useEffect`. O botão "voltar ao topo" aparece com a rolagem via CSS (`anima
 - **Professor:** Thiago Marcondes Santos
 - **Instituição:** IBMEC
 - **Semestre:** 2026.2
-
-## Testes
-
-```bash
-npm test
-```
-
-Roda `src/data/seo.test.js` (confere o `<head>` gerado por rota: canonical, `noindex` da 404, JSON-LD,
-tamanho das descrições) e `src/utils/agendamento.test.js` (validação de CPF, máscaras e link do WhatsApp).
 
 ## Rolagem suave e componentes animados
 
