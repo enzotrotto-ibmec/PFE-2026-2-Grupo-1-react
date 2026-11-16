@@ -16,6 +16,19 @@ com menu hambúrguer. O que muda é a forma de construir: o site virou uma SPA (
 Além do que veio do Vanilla, esta versão ganhou uma página inicial do ecossistema, a página da
 Fisioterapia, animações presas à rolagem e transição entre páginas.
 
+## Publicação
+
+O site é publicado via Vercel.
+
+* Link do site publicado: https://pfe-2026-2-grupo-1-react-sigma.vercel.app/
+
+Configuração do projeto no Vercel: preset **Vite**, comando de build `npm run build` e pasta de saída `dist`.
+O Vercel faz um novo deploy a cada push na `main`.
+
+O app é uma SPA com `BrowserRouter`, então o servidor precisa devolver o app para endereços como `/pkz`
+ao abrir direto ou dar F5. No build, o `vite.config.js` já gera um `index.html` por rota e um `404.html`;
+um `vercel.json` com *rewrite* para `/index.html` cobre qualquer outro caso (ver `scrum/sprint-03.md`).
+
 ## Tecnologias
 
 * React 19 (componentes, props e `useState`)
@@ -153,19 +166,6 @@ npm run build    # gera a versão de produção na pasta dist/
 npm run preview  # testa a versão de produção localmente
 npm test         # roda os testes (Node, sem dependências extras)
 ```
-
-## Publicação
-
-O site é publicado via Vercel.
-
-* Link do site publicado: 
-
-Configuração do projeto no Vercel: preset **Vite**, comando de build `npm run build` e pasta de saída `dist`.
-O Vercel faz um novo deploy a cada push na `main`.
-
-O app é uma SPA com `BrowserRouter`, então o servidor precisa devolver o app para endereços como `/pkz`
-ao abrir direto ou dar F5. No build, o `vite.config.js` já gera um `index.html` por rota e um `404.html`;
-um `vercel.json` com *rewrite* para `/index.html` cobre qualquer outro caso (ver `scrum/sprint-03.md`).
 
 ## Observações técnicas
 
