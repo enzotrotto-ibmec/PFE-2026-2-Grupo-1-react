@@ -192,23 +192,6 @@ troca de página, fundo WebGL) ficam isolados em `utils/animacoes.js`, `utils/ro
 sem `useEffect`. O botão "voltar ao topo" aparece com a rolagem via CSS (`animation-timeline`, em
 `global.css`); nos navegadores sem suporte fica sempre visível.
 
-## Nossa equipe
-
-* Alexia Schmid
-* Bernardo Gomes
-* Bernardo Nemirovsky
-* Enzo Trotto
-* Gabriel Góis
-* Guilherme Macedo
-* João Pedro Ferreira
-
-## Disciplina
-
-- **Curso/Disciplina:** Projeto Front-end (turma de terça-feira)
-- **Professor:** Thiago Marcondes Santos
-- **Instituição:** IBMEC
-- **Semestre:** 2026.2
-
 ## Rolagem suave e componentes animados
 
 * **Lenis 1.3.27** (MIT, darkroom.engineering): rolagem suave do site inteiro, ligada ao relógio do GSAP em `src/utils/rolagem.js` (sem isso o ScrollTrigger sai de sincronia). Se a Lenis falhar ao iniciar, o site rola do jeito nativo. As janelas (`<dialog>`) param a Lenis enquanto estão abertas e têm `data-lenis-prevent`.
@@ -239,3 +222,33 @@ Sem a variável o build funciona, só omite essas quatro peças.
 - **Agendamento:** a mensagem do WhatsApp (que vai na URL do `wa.me` e fica no histórico do navegador) mostra o CPF mascarado (`***.***.***-12`). O formulário continua validando o CPF completo. O telefone segue na mensagem.
 - **CSP e `Referrer-Policy` por `<meta>`** (só no build), que funcionam em qualquer hospedagem. O Vercel força HTTPS; cabeçalhos HTTP como `X-Content-Type-Options` e `Strict-Transport-Security` podem ser configurados no `vercel.json`.
 - **Terceiros que carregam:** Google Fonts (CSS e arquivos de fonte) e, só ao clicar em "Ver mapa", o mapa do Google. O CSS do Google Fonts não aceita SRI. Para eliminar esse terceiro, o caminho é hospedar as fontes no próprio site (pacotes `@fontsource`).
+
+## Nossa equipe
+
+* Alexia Schmid
+* Bernardo Gomes
+* Bernardo Nemirovsky
+* Enzo Trotto
+* Gabriel Góis
+* Guilherme Macedo
+* João Pedro Ferreira
+
+## Disciplina
+
+- **Curso/Disciplina:** Projeto Front-end (turma de terça-feira)
+- **Professor:** Thiago Marcondes Santos
+- **Instituição:** IBMEC
+- **Semestre:** 2026.2
+
+## Status dos entregáveis
+ 
+- [x] Estrutura HTML/JSX das páginas (um `index.html` e uma página por componente)
+- [x] Estilização CSS (mobile first)
+- [x] Responsividade (mobile, tablet e desktop)
+- [x] Menu hambúrguer (mobile) e menu completo (desktop)
+- [x] Imagens e remoção de placeholders vazios
+- [x] Sistema de agendamento
+- [x] Interatividade com React (estado, rotas, animações)
+- [x] Documentação Scrum
+- [x] Publicação no Vercel
+- [x] Revisão e testes finais
