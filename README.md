@@ -5,7 +5,7 @@
 Repositório do site da PKZ Lab & Studio One To One refeito em **React**, a partir da versão Vanilla
 (HTML, CSS e JavaScript puro) entregue na AC.
 
-**Esta é a versão com agendamento** (aula experimental com escolha de dia e horário, formulário validado e envio pelo WhatsApp).
+**Esta é a versão com agendamento publicada via Vercel** - aula experimental com escolha de dia e horário, formulário validado e envio pelo WhatsApp.
 
 * Repositório da versão Vanilla: https://github.com/enzotrotto-ibmec/PFE-2026-2-Grupo-1-vanila
 * Site da versão Vanilla (GitHub Pages): https://enzotrotto-ibmec.github.io/PFE-2026-2-Grupo-1-vanila/
@@ -62,7 +62,7 @@ As páginas de marca, de aula experimental, de privacidade e a 404 são carregad
 
 ```
 .
-├── index.html                      O ÚNICO HTML do projeto (o React desenha tudo dentro de <div id="root">)
+├── index.html                      O único HTML do projeto (o React desenha tudo dentro de <div id="root">)
 ├── vite.config.js                  Configuração do Vite, base do site e geração do HTML de cada rota no build
 ├── package.json                    Dependências e scripts (dev, build, preview, test)
 ├── public/assets/                  Imagens (em 4 larguras), logos e favicon
