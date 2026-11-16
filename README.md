@@ -25,7 +25,7 @@ Fisioterapia, animações presas à rolagem e transição entre páginas.
 * CSS3 (as folhas de estilo do Vanilla, mais `home.css` e `fisio.css`)
 * Vercel (hospedagem)
 
-## Requisitos da AP2 (e-mail do professor) e onde estão
+## Requisitos da AP2
 
 | Requisito | Como foi feito |
 | --- | --- |
@@ -35,7 +35,7 @@ Fisioterapia, animações presas à rolagem e transição entre páginas.
 | `useState` | Menu hambúrguer, janelas de contato e agendamento, formulário, mapa |
 | Navegação com `BrowserRouter` | `src/main.jsx` (BrowserRouter) e `src/App.jsx` (Routes/Route) |
 | Sem `<a>` para navegação interna | Toda troca de página usa `<Link>` (via `LinkInterno`); `<a>` só para links externos (WhatsApp, Instagram, Google Maps) e para o atalho de acessibilidade "Pular para o conteúdo" (`href="#main"`, que não troca de página) |
-| Sem `useEffect` (só na próxima aula) | Os componentes de dados e de página não usam. **Exceção assumida pelo grupo:** os efeitos visuais (`utils/animacoes.js`, `utils/rolagem.js`, `components/efeitos/FundoShader.jsx` e `components/TransicaoPagina.jsx`) usam `useLayoutEffect`/`useEffect`, porque GSAP, Lenis e WebGL precisam do DOM já montado |
+| Sem `useEffect` | Os componentes de dados e de página não usam. **Exceção assumida pelo grupo:** os efeitos visuais (`utils/animacoes.js`, `utils/rolagem.js`, `components/efeitos/FundoShader.jsx` e `components/TransicaoPagina.jsx`) usam `useLayoutEffect`/`useEffect`, porque GSAP, Lenis e WebGL precisam do DOM já montado |
 
 ## Rotas
 
@@ -153,7 +153,7 @@ npm test         # roda os testes (Node, sem dependências extras)
 
 O site é publicado via Vercel.
 
-* Link do site publicado: _(colar aqui o link do Vercel)_
+* Link do site publicado: 
 
 Configuração do projeto no Vercel: preset **Vite**, comando de build `npm run build` e pasta de saída `dist`.
 O Vercel faz um novo deploy a cada push na `main`.
