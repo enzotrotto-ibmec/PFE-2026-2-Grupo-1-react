@@ -9,7 +9,8 @@ Repositório do site da PKZ Lab & Studio One To One refeito em **React**, a part
 
 * Repositório da versão Vanilla: https://github.com/enzotrotto-ibmec/PFE-2026-2-Grupo-1-vanila
 * Site da versão Vanilla (GitHub Pages): https://enzotrotto-ibmec.github.io/PFE-2026-2-Grupo-1-vanila/
-* Repositório da versão sem agendamento: 
+* Repositório da versão sem agendamento: https://github.com/enzotrotto-ibmec/PFE-2026-2-Grupo-1-react-semfisio
+OBS: O nome do repositório está sem "fisio" (de fisioterapia), mas foi porque fizemos confusão. Ele contém a parte de fisioterapia, mas está sem a de agendamento!
 
 O design, os textos, as imagens e o sistema de agendamento partem do Vanilla, mobile first e
 com menu hambúrguer. O que muda é a forma de construir: o site virou uma SPA (*single page application*).
