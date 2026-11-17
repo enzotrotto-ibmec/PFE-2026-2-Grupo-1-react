@@ -6,7 +6,7 @@ Refazer o site da PKZ Lab & Studio One To One em **React**, a partir da versão 
 
 - **Stack:** React 19, React Router, Vite, GSAP + ScrollTrigger, Lenis, CSS3
 - **Publicação:** Vercel (versão com agendamento e versão sem agendamento)
-- **Entrega:** 16/11/2026 (com ajustes do README até 17/11)
+- **Entrega:** 17/11/2026 (com ajustes do README até 17/11)
 - **Disciplina:** Projeto Front-end (turma de terça-feira), professor Thiago Marcondes Santos, IBMEC, 2026.2
 
 ## Arquivos desta pasta
