@@ -6,7 +6,7 @@ Refazer o site da PKZ Lab & Studio One To One em **React**, a partir da versão 
 
 - **Stack:** React 19, React Router, Vite, GSAP + ScrollTrigger, Lenis, CSS3
 - **Publicação:** Vercel (versão com agendamento e versão sem agendamento)
-- **Entrega:** 17/11/2026 (com ajustes do README até 17/11)
+- **Entrega:** 17/11/2026
 - **Disciplina:** Projeto Front-end (turma de terça-feira), professor Thiago Marcondes Santos, IBMEC, 2026.2
 
 ## Arquivos desta pasta
@@ -16,7 +16,7 @@ Refazer o site da PKZ Lab & Studio One To One em **React**, a partir da versão 
 | [product-backlog.md](product-backlog.md) | Itens do produto, em qual sprint cada um entra, pendências e riscos |
 | [sprint-01.md](sprint-01.md) | 08/11 a 10/11: base do projeto, componentes compartilhados e páginas das marcas (commits 01 a 14), com o que aconteceu de fato |
 | [sprint-02.md](sprint-02.md) | 11/11 a 13/11: agendamento, portal, páginas auxiliares, rotas e teste do site inteiro (commits 15 a 22), com o que aconteceu de fato |
-| [sprint-03.md](sprint-03.md) | 14/11 a 17/11: integração (Home, Fisioterapia, animações, SEO e testes), publicação no Vercel, ajustes finais e entrega |
+| [sprint-03.md](sprint-03.md) | 14/11 a 16/11: integração (Home, Fisioterapia, animações, SEO e testes), publicação no Vercel, ajustes finais e entrega |
 
 ## Cronograma geral
 
@@ -26,7 +26,7 @@ Planejado e o que o histórico do Git mostra (52 commits, de 01/11 a 17/11):
 |---|---|---|---|
 | 01 | 08/11 (dom) a 10/11 (ter) | Ter a base do projeto, os componentes compartilhados e as duas páginas das marcas (commits 01 a 14) | Tudo em 08/11 e 09/11 |
 | 02 | 11/11 (qua) a 13/11 (sex) | Fechar agendamento, portal, privacidade, 404 e rotas, e testar o site inteiro (commits 15 a 22) | Os itens já estavam no repositório em 08/11 e 09/11. Sem commits entre 10/11 e 14/11 |
-| 03 | 14/11 (sáb) a 16/11 (seg) | Publicar no Vercel, fazer os ajustes finais e entregar | Integração em 15/11 (Home, Fisioterapia, animações, SEO e testes), publicação e README em 16/11, últimos ajustes do README em 17/11 |
+| 03 | 14/11 (sáb) a 17/11 (seg) | Publicar no Vercel, fazer os ajustes finais e entregar | Integração em 15/11 (Home, Fisioterapia, animações, SEO e testes), publicação e README em 16/11, últimos ajustes do README em 17/11 |
 
 **Principais mudanças em relação ao plano:** o portal com halter foi substituído pela página inicial do ecossistema; entrou a página da Fisioterapia; entraram animações, SEO e testes; o `vercel.json` não foi criado e o `base` do Vite passou a depender do Vercel; houve duas publicações (com e sem agendamento). Detalhes no [Product Backlog](product-backlog.md) e na [Sprint 03](sprint-03.md).
 

@@ -32,7 +32,7 @@ Na integração de 15/11, um único commit ("adicionando animacoes", 108 arquivo
 
 ## Sprint Backlog
 
-### 14/11 a 16/11: publicação (PB-14)
+### 14/11 a 17/11: publicação (PB-14)
 
 | ✔ | Tarefa | Quem (sugestão) | Situação |
 |---|---|---|---|
