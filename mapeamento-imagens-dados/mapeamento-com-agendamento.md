@@ -4,7 +4,6 @@ Documento do projeto **PKZ Lab & Studio One To One** (Projeto Front-end, IBMEC, 
 
 * Repositório: https://github.com/enzotrotto-ibmec/PFE-2026-2-Grupo-1-react
 * Site publicado: https://pfe-2026-2-grupo-1-react-sigma.vercel.app/
-* Linhas conferidas no commit `756da54`. Se o código for editado, os números de linha podem mudar.
 
 ## Resumo
 
