@@ -16,7 +16,7 @@ Refazer o site da PKZ Lab & Studio One To One em **React**, a partir da versão 
 | [product-backlog.md](product-backlog.md) | Itens do produto, em qual sprint cada um entra, pendências e riscos |
 | [sprint-01.md](sprint-01.md) | 08/11 a 10/11: base do projeto, componentes compartilhados e páginas das marcas (commits 01 a 14), com o que aconteceu de fato |
 | [sprint-02.md](sprint-02.md) | 11/11 a 13/11: agendamento, portal, páginas auxiliares, rotas e teste do site inteiro (commits 15 a 22), com o que aconteceu de fato |
-| [sprint-03.md](sprint-03.md) | 14/11 a 16/11: integração (Home, Fisioterapia, animações, SEO e testes), publicação no Vercel, ajustes finais e entrega |
+| [sprint-03.md](sprint-03.md) | 14/11 a 17/11: integração (Home, Fisioterapia, animações, SEO e testes), publicação no Vercel, ajustes finais e entrega |
 
 ## Cronograma geral
 
